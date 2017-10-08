@@ -55,6 +55,7 @@ Words is a elegant, light weighted, tremendously intuitive, powerfully flexible 
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 * Font-Awesome https://github.com/FortAwesome/Font-Awesome FontAwesome 4.7.0 Copyright 2012 Dave Gandy Font License: SIL OFL 1.1 Code License: MIT License http://fontawesome.io/license/
 * Bootstrap http://getbootstrap.com/ [MIT](http://opensource.org/licenses/MIT) Copyright 2011-2015 Twitter, Inc.
+* theia-sticky-sidebar https://github.com/WeCodePixels/theia-sticky-sidebar [MIT](http://opensource.org/licenses/MIT)
 
 == Images used on Screenshot ==
 * https://pixabay.com/en/portrait-face-eyes-model-hair-2033977/

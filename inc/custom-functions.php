@@ -49,3 +49,10 @@ function words_show_post_meta(){
 		<?php
 	}
 }
+
+// Add specific CSS class by filter
+function words_body_class( $classes ) {
+	$classes[] = 'at-sticky-sidebar right-sidebar ';
+	return $classes;
+}
+add_filter( 'body_class', 'words_body_class' );
