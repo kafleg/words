@@ -321,6 +321,7 @@ add_action( 'widgets_init', 'words_widgets_init' );
  */
 
 function words_scripts() {
+	global $words_theme_options;
 
 	/*google font  */
 
@@ -450,3 +451,11 @@ require get_template_directory() . '/inc/author-widget.php';
  */
 
 require get_template_directory() . '/inc/custom-header.php';
+
+
+// Add specific CSS class by filter
+function words_body_class( $classes ) {
+	$classes[] = 'at-sticky-sidebar right-sidebar ';
+	return $classes;
+}
+add_filter( 'body_class', 'words_body_class' );

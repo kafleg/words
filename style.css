@@ -2687,7 +2687,11 @@ object {
  }
  .site-footer .site-info span{
  	padding:0;
+ 	color: #fff;
  }
+ .site-info a {
+    color: #fff;
+}
 
 
 /*--------------------------------------------------------------

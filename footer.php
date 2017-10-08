@@ -43,8 +43,8 @@
 			<div class="container">
 				<span class="copy-right-text"><?php echo $copyright; ?></span>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'words' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'words' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'words' ), 'Words', '<a href="http://www.kafleg.com.np" rel="designer">Kafle G</a>' ); ?>
+				<span class="sep"> | <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'words' ), 'Words', '<a href="http://www.kafleg.com.np" rel="designer">Kafle G</a>' ); ?> </span>
+				
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
