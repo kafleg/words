@@ -23,6 +23,8 @@ Words is a elegant, light weighted, tremendously intuitive, powerfully flexible 
 
 == Changelog ==
 
+## 1.0.4 - Oct 10 2017 ##
+* Design Corrected
 
 ## 1.0.3 - Feb 28 2017 ##
 * Added Header Image
