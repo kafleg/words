@@ -16,7 +16,8 @@ if ( !function_exists('words_default_theme_options') ) :
             /*feature section options*/
             'words-footer-copyright'=>'',
             'words-blog-content'=>'',
-            'words-blog-meta'  =>'',        
+            'words-blog-meta'  =>'',
+            'words-sticky-sidebar-option' =>'',       
         );
 
         return apply_filters( 'words_default_theme_options', $default_theme_options );
@@ -68,28 +69,28 @@ function words_customize_register( $wp_customize ) {
         'title'          => __( 'Copyright Text', 'words' )
     ) );
 
-    /*copyright*/
-    $wp_customize->add_setting( 'words_theme_options[words-footer-copyright]', array(
-        'capability'        => 'edit_theme_options',
-        'default'           => __('All Right Reserved 2016', 'words'),
-        'sanitize_callback' => 'wp_kses_post'
-    ) );
-    $wp_customize->add_control( 'words-footer-copyright', array(
-        'label'     => __( 'Copyright Text', 'words' ),
-        'description' => __('Your Own Copyright Text', 'words'),
-        'section'   => 'words-footer-option',
-        'settings'  => 'words_theme_options[words-footer-copyright]',
-        'type'      => 'text',
-        'priority'  => 10
-    ) ); 
-
-        /*Blog Page Options*/
-        $wp_customize->add_section( 'words-blog-option', array(
-            'priority'       => 170,
-            'capability'     => 'edit_theme_options',
-            'theme_supports' => '',
-            'title'          => __( 'Blog Options', 'words' )
+        /*copyright*/
+        $wp_customize->add_setting( 'words_theme_options[words-footer-copyright]', array(
+            'capability'        => 'edit_theme_options',
+            'default'           => __('All Right Reserved 2016', 'words'),
+            'sanitize_callback' => 'wp_kses_post'
         ) );
+        $wp_customize->add_control( 'words-footer-copyright', array(
+            'label'     => __( 'Copyright Text', 'words' ),
+            'description' => __('Your Own Copyright Text', 'words'),
+            'section'   => 'words-footer-option',
+            'settings'  => 'words_theme_options[words-footer-copyright]',
+            'type'      => 'text',
+            'priority'  => 10
+        ) ); 
+
+    /*Blog Page Options*/
+    $wp_customize->add_section( 'words-blog-option', array(
+        'priority'       => 170,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '',
+        'title'          => __( 'Blog Options', 'words' )
+    ) );
 
         /*blog post*/
         $wp_customize->add_setting( 'words_theme_options[words-blog-content]', array(
@@ -118,7 +119,28 @@ function words_customize_register( $wp_customize ) {
             'settings'  => 'words_theme_options[words-blog-meta]',
             'type'      => 'checkbox',
             'priority'  => 10
-        ) );   
+        ) );
+
+    /*Sticky Sidebar Options*/
+    $wp_customize->add_section( 'words-sticky-sidebar', array(
+        'priority'       => 170,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '',
+        'title'          => __( 'Sidebar Options', 'words' )
+    ) );
+
+    /*Sticky Sidebar Options on customizer*/
+    $wp_customize->add_setting( 'words_theme_options[words-sticky-sidebar-option]', array(
+        'capability'        => 'edit_theme_options',
+        'sanitize_callback' => 'words_sanitize_checkbox'
+    ) );
+    $wp_customize->add_control( 'words-sticky-sidebar-option', array(
+        'label'     => __( 'Enable/Disable Sticky Sidebar', 'words' ),
+        'section'   => 'words-sticky-sidebar',
+        'settings'  => 'words_theme_options[words-sticky-sidebar-option]',
+        'type'      => 'checkbox',
+        'priority'  => 10
+    ) );  
 }
 add_action( 'customize_register', 'words_customize_register' );
 

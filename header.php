@@ -21,7 +21,7 @@ $GLOBALS['words_theme_options']  = words_get_theme_options();
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('at-sticky-sidebar'); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'words' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">

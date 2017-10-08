@@ -363,7 +363,10 @@ function words_scripts() {
 	wp_enqueue_script( 'words-custom', get_template_directory_uri() . '/assets/js/words-custom.js', array('jquery'), '20151215', true );
 
 
-
+	/*Sticky Sidebar*/
+	 if( 1 == $words_theme_options['words-sticky-sidebar-option'] ){
+		wp_enqueue_script( 'theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/theia-sticky-sidebar.js', array('jquery'), '20151215', true );
+	}
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
